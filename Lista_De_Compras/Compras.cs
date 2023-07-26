@@ -58,6 +58,8 @@ namespace Lista_De_Compras
             // int produtoBuscado = int.Parse(Console.ReadLine()!);
             // p = comprasLista.Find(x => x.codigo == produtoBuscado)!;
 
+           Compras c = comprasLista.IndexOf();
+
 
 
             // p = comprasLista.Find(x => )!;
