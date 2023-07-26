@@ -137,6 +137,7 @@ namespace Agenda_Telefonica
 
                 foreach (Agenda item in contatosLista)
                 {
+                    // formata o número de telefone para o padrão brasileiro
                     numeroFormatado = $"{item.numero.Substring(0, 2)} {item.numero.Substring(2, 5)}-{item.numero.Substring(7)}";
 
                     Console.WriteLine(@$"
