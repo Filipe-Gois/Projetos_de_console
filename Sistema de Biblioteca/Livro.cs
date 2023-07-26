@@ -227,15 +227,6 @@ namespace Sistema_de_Biblioteca
             }
         }
 
-        public void imprimirLivro(Livro livro)
-        {
-            Console.WriteLine($@"
-        Livro: {livro.titulo}
-        Autor: {livro.autor}
-        Ano de publicação: {livro.anoPublicacao}
-        Número de exemplares: {livro.numeroExemplares.ToString("N0")}");
-        }
-
         public void imprimirLivro()
         {
             Console.WriteLine($"\nLivros cadastrados:");
@@ -249,6 +240,15 @@ namespace Sistema_de_Biblioteca
         Número de exemplares: {item.numeroExemplares.ToString("N0")}");
         // Exemplares Maximos: {item.maximoExemplares} -- colocar abaixo do "Número de exemplares" caso queira testar os métodos "Emprestimo()" e "Devolver()"
             }
+        }
+
+        public void imprimirLivro(Livro livro)
+        {
+            Console.WriteLine($@"
+        Livro: {livro.titulo}
+        Autor: {livro.autor}
+        Ano de publicação: {livro.anoPublicacao}
+        Número de exemplares: {livro.numeroExemplares.ToString("N0")}");
         }
     }
 }
