@@ -13,6 +13,7 @@ namespace Lista_De_Compras
         public int i { get; set; } = 0;
         public Compras p { get; set; }
         public List<Compras> comprasLista = new List<Compras>();
+        
 
         public Compras()
         {
@@ -51,15 +52,24 @@ namespace Lista_De_Compras
         public void Remover()
         {
             Console.WriteLine($"\nInforme o nome do produto a ser removido:");
-            string produtoBuscado = Console.ReadLine()!.ToUpper();
+            int produtoBuscado = int.Parse(Console.ReadLine()!.ToUpper());
 
             // caso queira usar o código do produto como parâmetro para remoção:
             // int produtoBuscado = int.Parse(Console.ReadLine()!);
             // p = comprasLista.Find(x => x.codigo == produtoBuscado)!;
 
-            p = comprasLista.Find(x => x.produto == produtoBuscado)!;
-            comprasLista.Remove(p);
 
+
+            // p = comprasLista.Find(x => )!;
+
+
+            // if (comprasLista.IndexOf())
+            // {
+
+            // }
+
+
+            comprasLista.RemoveAt(produtoBuscado);
             Console.WriteLine(p != null ? $"\nO produto {p.produto} foi removido com sucesso!" : $"\nProduto não encontrado.");
         }
 
@@ -70,14 +80,11 @@ namespace Lista_De_Compras
                 Console.WriteLine($"\nLista vazia.");
 
             }
-
             else
             {
                 foreach (Compras item in comprasLista)
                 {
-
-                    i++;
-                    Console.WriteLine($"\n{i}: {item.produto}");
+                    Console.WriteLine($"\n{comprasLista.IndexOf(item)}: {item.produto}");
                 }
             }
 
