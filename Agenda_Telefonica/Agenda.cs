@@ -137,12 +137,12 @@ namespace Agenda_Telefonica
 
                 foreach (Agenda item in contatosLista)
                 {
-                    // formata o número de telefone para o padrão brasileiro
-                    numeroFormatado = $"{item.numero.Substring(0, 2)} {item.numero.Substring(2, 5)}-{item.numero.Substring(7)}";
+                    // formata o número de telefone para o padrão brasileiro (está dando erro caso o número informado seja menor do que o tamanho de um número de telefone padrão)
+                    // numeroFormatado = $"{item.numero.Substring(0, 2)} {item.numero.Substring(2, 5)}-{item.numero.Substring(7)}";
 
                     Console.WriteLine(@$"
                 Nome: {item.nome}. 
-                Número: {numeroFormatado}");
+                Número: {item.numero}");
                 }
             }
             else
@@ -153,11 +153,11 @@ namespace Agenda_Telefonica
         public void ListarContatos(Agenda agenda)
         {
 
-            numeroFormatado = $"{agenda.numero.Substring(0, 2)} {agenda.numero.Substring(2, 5)}-{agenda.numero.Substring(7)}";
+            // numeroFormatado = $"{agenda.numero.Substring(0, 2)} {agenda.numero.Substring(2, 5)}-{agenda.numero.Substring(7)}";
 
             Console.WriteLine(@$"
                 Nome: {agenda.nome}. 
-                Número: {numeroFormatado}");
+                Número: {agenda.numero}");
         }
     }
 }
