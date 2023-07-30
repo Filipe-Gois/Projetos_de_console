@@ -161,14 +161,7 @@ namespace Gerenciamento_De_Estoque
 
             if (produtoBuscado != null)
             {
-                foreach (Estoque item in estoqueLista)
-                {
-                    if (item.nome == produtoBuscado.nome)
-                    {
-                        ListarProduto(item);
-                    }
-                }
-
+                ListarProduto(produtoBuscado);
             }
             else
             {
@@ -180,7 +173,7 @@ namespace Gerenciamento_De_Estoque
             Console.WriteLine(@$"
                 Produto: {estoque.nome}
                 Quantidade: {estoque.quantidade}
-                Preço: {estoque.preco}");
+                Preço: {estoque.preco:C2}");
         }
         public void ListarProduto()
         {
@@ -195,7 +188,7 @@ namespace Gerenciamento_De_Estoque
                     Console.WriteLine(@$"
                 Produto: {item.nome}
                 Quantidade: {item.quantidade}
-                Preço: {item.preco}");
+                Preço: {item.preco:C2}");
                 }
             }
         }
